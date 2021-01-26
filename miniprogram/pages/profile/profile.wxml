@@ -1,2 +1,13 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="head">
+  <image src="{{avatar}}" class="img"></image>
+  <view class="text">
+    <text>{{nickname}}</text>
+  </view>
+</view>
+
+<view class="container">
+  <block wx:for="{{mylist}}" wx:key="id">
+    <q-list mylist="{{item}}" class="mylist-img"></q-list>
+  </block>
+</view>

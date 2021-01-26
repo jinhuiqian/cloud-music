@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "音乐"
+  "usingComponents": {
+    "q-list":"/components/mylist/mylist"
+  },
+  "navigationBarTitleText": "我的"
 }

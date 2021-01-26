@@ -3,7 +3,7 @@
     "pages/music/music",
     "pages/find/find",
     "pages/profile/profile",
-    "pages/test/test"
+    "pages/songlist/songlist"
   ],
   "requiredBackgroundModes": [
     "audio"

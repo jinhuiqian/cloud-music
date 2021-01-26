@@ -1,1 +1,40 @@
 /* pages/profile/profile.wxss */
+.head{
+  height: 140rpx;
+  margin-top: 50rpx;
+  padding-left: 60rpx;
+  display: flex;
+}
+
+.img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.container{
+  height: 340rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  width: 95%;
+  border-radius: 25rpx;
+  margin: 0 auto;
+}
+
+
+.mylist-img{
+  width: 170rpx;
+}
+
+.text{
+  font-size: 36rpx;
+  font-weight: bold;
+  padding-left: 30rpx;
+}
+

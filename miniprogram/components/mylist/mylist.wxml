@@ -1,0 +1,7 @@
+<!--components/mylist/mylist.wxml-->
+<view class="container">
+<view class="mylist">
+  <image src="{{mylist.picUrl}}" class="mylist-img"></image>
+  <text class="mylist-describe">{{mylist.describe}}</text>
+</view>
+</view>
