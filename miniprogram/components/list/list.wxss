@@ -1,0 +1,30 @@
+/* components/list/list.wxss */
+
+.list{
+  width: 140rpx;
+  position: relative;
+  padding-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.list-img {
+  width: 80rpx;
+  height: 80rpx;
+  padding-left: 15rpx;
+}
+
+.list-describe{
+  font-size: 26rpx;
+  line-height: 1.2;
+  padding-left: 4rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

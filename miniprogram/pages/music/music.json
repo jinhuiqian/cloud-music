@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-list":"/components/list/list",
+    "x-playlist":"/components/playlist/playlist"
+  },
+  "navigationBarTitleText": "音乐"
+}

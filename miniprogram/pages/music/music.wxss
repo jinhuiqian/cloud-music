@@ -1,0 +1,67 @@
+/* pages/music/music.wxss */
+.swiper {
+  height: 340rpx;
+  margin-top: 20rpx;
+}
+
+.img{
+  width: 95%;
+  height: 95%;
+  border-radius: 20rpx;
+}
+
+.center{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  width: auto;
+}
+
+
+/*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+ }
+
+ .title{
+   width: 100%;
+   margin-top: 20rpx;
+ }
+
+.rec {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
+.more{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
+.playlist-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+
+.scroll-x {
+  white-space: nowrap;
+  display: flex;
+}
+
+/* 隐藏scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
