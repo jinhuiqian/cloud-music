@@ -4,7 +4,9 @@
     "pages/find/find",
     "pages/profile/profile",
     "pages/songlist/songlist",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/musiclist/musiclist",
+    "pages/player/player"
   ],
   "requiredBackgroundModes": [
     "audio"
