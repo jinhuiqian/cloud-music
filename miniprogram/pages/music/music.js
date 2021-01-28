@@ -1,4 +1,7 @@
 // pages/music/music.js
+const MAX_LIMIT = 15
+const db = wx.cloud.database
+
 Page({
 
   /**
@@ -80,50 +83,16 @@ Page({
       ],
 
       playlist: [
-        {
-          "id": "1001",
-          "playCount": 1.4641238e+06,
-          "name": "【Acoustic】坠入断电后的温暖梦境",
-          "picUrl": "http://p4.music.126.net/IwTrja3OoFdDmNf1jzzfXw==/109951165534084755.jpg?param=140y140"
-        },
-        {
-          "id": "1002",
-          "playCount": 622822.6,
-          "name": "劲♂ 夫 ♀ 处 刑 曲",
-          "picUrl": "http://p3.music.126.net/klQ-QH6R73Z7LdLkNvl78A==/109951165374086761.jpg?param=140y140"
-        },
-        {
-          "id": "1003",
-          "playCount": 1.3256845e+06,
-          "name": "做我的公主吧 我把皇冠给你",
-          "picUrl": "http://p3.music.126.net/ZJJ1ZKZ9_myIdOMKqT2LAQ==/109951165426759607.jpg?param=140y140"
-        },
-        {
-          "id": "1004",
-          "playCount": 1.8562415e+06,
-          "name": "Crush只是一场小感冒",
-          "picUrl": "http://p3.music.126.net/rPrQVPau1RukWWU4u1UYqA==/109951165559573991.jpg?param=140y140"
-        },
-        {
-          "id": "1005",
-          "playCount": 256485.6,
-          "name": "精选说唱♥︎旋律rap♥︎单曲循环",
-          "picUrl": "http://p4.music.126.net/PDX2qVc9RSq4rasWaxPCvA==/109951165499589898.jpg?param=140y140"
-        },
-        {
-          "id": "1006",
-          "playCount": 2.3612485e+06,
-          "name": "我对日落许愿，希望你永远在我身边",
-          "picUrl": "http://p3.music.126.net/ZIwfRbTpgUf6oHae3ShYAQ==/109951165637049653.jpg?param=140y140"
-        },
-      ],
+
+      ]
+    
     },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._getPlaylist()
   },
 
   /**
@@ -154,24 +123,46 @@ Page({
 
   },
 
-  /**
+/**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.setData({
+      playlist: []
+    })
+    this._getPlaylist()
   },
 
-  /**
+/**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this._getPlaylist()
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function () {},
 
-  }
+  _getPlaylist() {
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.cloud.callFunction({
+      name: 'music',
+      data: {
+        start: this.data.playlist.length,
+        count: MAX_LIMIT,
+        $url: 'playlist'
+      }
+    }).then((res) => {
+      console.log(res)
+      this.setData({   
+        playlist: this.data.playlist.concat(res.result.data)
+      })
+      wx.stopPullDownRefresh()
+      wx.hideLoading()
+    })
+  },
 })

@@ -19,7 +19,7 @@
 </view>
 
 <view class="playlist-container">
-  <block wx:for="{{playlist}}" wx:key="id">
+  <block wx:for="{{playlist}}" wx:key="_id">
     <x-playlist playlist="{{item}}"></x-playlist>
   </block>
 </view>
