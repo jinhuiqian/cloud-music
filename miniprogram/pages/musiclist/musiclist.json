@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "q-musiclist": "/components/musiclist/musiclist"
+    "q-musiclist": "/components/musiclist/musiclist",
+    "q-navbar": "/components/navbar/navbar"
   },
-  "navigationBarTitleText": "歌曲"
+  "navigationStyle": "custom"
 }

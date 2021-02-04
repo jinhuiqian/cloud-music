@@ -1,0 +1,48 @@
+/* miniprogram/pages/search/search.wxss */
+.search {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20rpx;
+  width: 70%;
+  height: 70rpx;
+  border-radius: 70rpx;
+  background-color: rgba(212, 212, 212, 0.932);
+  padding-left: 80rpx;
+}
+
+.icon-fangdajing{
+  position: absolute;
+  font-size: 60rpx;
+  top: 23rpx;
+  left: 80rpx;
+}
+
+.font {
+  color: #fefefe;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+
+.text {
+  font-size: 35rpx;
+  margin-left: 30rpx;
+}
+
+/*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+ }
+
+ .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+ }
+

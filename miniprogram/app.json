@@ -6,7 +6,9 @@
     "pages/songlist/songlist",
     "pages/test/test",
     "pages/musiclist/musiclist",
-    "pages/player/player"
+    "pages/player/player",
+    "pages/search/search",
+    "pages/searchresult/searchresult"
   ],
   "requiredBackgroundModes": [
     "audio"

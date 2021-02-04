@@ -36,6 +36,41 @@ exports.main = async (event, context) => {
     ctx.body = res.data
   })
 
+  app.router('musicUrl', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/song/url?id=${event.musicId}`)
+    ctx.body = res.data
+  })
+
+  app.router('swiper', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/banner`)
+    ctx.body = res.data
+  })
+
+  app.router('ball', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/homepage/dragon/ball`)
+    ctx.body = res.data
+  })
+
+  app.router('searchdefault', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/search/default`)
+    ctx.body = res.data
+  })
+
+  app.router('hotsearch', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/search/hot/detail`)
+    ctx.body = res.data
+  })
+
+  app.router('searchresult', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/search?keywords=${event.key}`)
+    ctx.body = res.data
+  })
+
+  app.router('lyric', async(ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/lyric?id=${event.musicId}`)
+    ctx.body = res.data
+})
+    
   return app.serve()
   }
 

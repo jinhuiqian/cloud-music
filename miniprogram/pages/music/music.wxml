@@ -1,13 +1,18 @@
 <!--pages/music/music.wxml-->
+<view class="font" bind:tap="goToSearch"> 
+<input class="search" disabled="true" value="{{searchdefault}}"/>
+<text class="iconfont icon-fangdajing"></text>
+</view>
+
 <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true" interval="3000" duration="1000" class="swiper">
-  <swiper-item wx:for="{{imgUrls}}" class="center">
-    <image src="{{item.url}}" class="img"></image>
+  <swiper-item wx:for="{{imgUrl}}" class="center">
+    <image src="{{item.imageUrl}}" class="img"></image>
   </swiper-item>
 </swiper>
 
 <scroll-view class="list" enable-flex="true" scroll-x="true">
-  <block wx:for="{{lists}}" wx:key="id">
-    <my-list lists="{{item}}"></my-list>
+  <block wx:for="{{ball}}" wx:key="id">
+    <my-list ball="{{item}}"></my-list>
   </block>
 </scroll-view>
 

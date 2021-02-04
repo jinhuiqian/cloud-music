@@ -13,9 +13,11 @@
 }
 
 .list-img {
+  border-radius: 50%;
+  background-color: indianred;
   width: 80rpx;
   height: 80rpx;
-  padding-left: 15rpx;
+  margin-top: 10rpx;
 }
 
 .list-describe{

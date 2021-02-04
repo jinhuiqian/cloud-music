@@ -1,0 +1,11 @@
+<view class="container" hidden="{{!isLyricShow}}">
+<scroll-view class="lyric-scroll" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation="true">
+  <view class="lyric-panel">
+    <block wx:for="{{lyrics}}" wx:key="item">
+      <view class="lyric {{index == nowLyricIndex?'heightlight-lyric': ''}}">
+        {{item.lrc}}
+      </view>
+    </block>
+  </view>
+</scroll-view>
+</view>

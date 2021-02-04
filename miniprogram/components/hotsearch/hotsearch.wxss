@@ -1,0 +1,32 @@
+/* components/hotsearch/hotsearch.wxss */
+.container {
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+  overflow:hidden; 
+}
+
+.order {
+  padding-right: 30rpx;
+}
+
+.hotsearch{
+  width: 300rpx;
+}
+
+.hotsearch-name{
+  color: black;
+}
+
+.hotsearch-icon {
+  padding-left: 10rpx;
+  height: 40rpx;
+  width: 40rpx;
+}

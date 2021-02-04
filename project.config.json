@@ -76,6 +76,24 @@
           "pathName": "pages/musiclist/musiclist",
           "query": "playlistid=104565668",
           "scene": null
+        },
+        {
+          "name": "player",
+          "pathName": "pages/player/player",
+          "query": "musicid=247187&index=0",
+          "scene": null
+        },
+        {
+          "name": "search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "searchresult",
+          "pathName": "pages/searchresult/searchresult",
+          "query": "keywords=冬眠",
+          "scene": null
         }
       ]
     }

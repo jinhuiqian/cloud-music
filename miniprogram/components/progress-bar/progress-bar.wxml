@@ -1,0 +1,24 @@
+<view class="progress-container">
+
+  <!-- 播放时间 -->
+  <view class="progress-times">{{showTimes.currentTime}}</view>
+
+  <view class="progress-content">
+    <!-- 可移动区域 -->
+    <movable-area class="movable-area">
+      <!-- 可移动视图容器 -->
+      <movable-view class="movable-view" 
+       direction="horizontal" 
+        bindchange="onChange"
+        bindtouchend="onTouchEnd"
+        x="{{movableDis}}"
+      >
+      </movable-view>
+    </movable-area>
+    <!-- 进度条 -->
+    <progress stroke-width="2" backgroundColor="#969696" activeColor="#fff" percent="{{progress}}" activeColor="red"/>
+  </view>
+
+  <!-- 歌曲长度 -->
+  <view class="progress-times">{{showTimes.totalTime}}</view>
+</view>                                             

@@ -1,0 +1,8 @@
+<!--components/hotsearch/hotsearch.wxml-->
+<view class="container">
+<view class="hotsearch">
+  <text class="order">{{index}}</text>
+  <text class="hotsearch-name">{{hotsearch.searchWord}}</text>
+  <image class="hotsearch-icon"  src="{{hotsearch.iconUrl}}"></image>
+</view>
+</view>

@@ -1,3 +1,10 @@
+@import"../../iconfont.wxss";
+
+.container {
+  height: 700rpx;
+  margin-bottom: 20rpx;
+}
+
 /* 顶部歌单信息容器，使用高斯模糊加上透明度 */
 .detail-container {
   height: 320rpx;
@@ -9,32 +16,55 @@
 .detail-mask {
   position: absolute;
   width: 100%;
-  height: 320rpx;
+  height: 600rpx;
   background-color: #333;
   top: 0;
   left: 0;
   z-index: -1;
+  border-bottom-right-radius: 187px 8px;
+  border-bottom-left-radius: 187px 8px;
 }
 
 /* 详情信息容器，flex布局，绝对定位在吸顶位置，垂直方向（次轴）居中，水平方向（主轴）左对齐 */
 .detail-info {
   display: flex;
   position: absolute;
-  top: 0;
+  top: 200rpx;
   left: 0;
   width: 100%;
   height: 320rpx;
-  padding: 20rpx;
+  padding: 30rpx;
   box-sizing: border-box;
   align-items: center;
 }
 
 /* 左边的图片 */
 .detail-img {
-  width: 280rpx;
-  height: 280rpx;
+  left: 20rpx;
+  width: 270rpx;
+  height: 270rpx;
   margin-right: 24rpx;
   border-radius: 6rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.back{
+  position: absolute;
+  left: 20rpx;
+  top: 12rpx;
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 24rpx;
+  border-radius: 6rpx;
+  border-radius: 20rpx;
+  background-color: rgba(128, 128, 128, 0.336);
+  z-index: -1;
+}
+
+.info {
+display: flex;
+flex-flow: column;
 }
 
 /* 右边的文字 */
@@ -43,4 +73,123 @@
   font-size: 36rpx;
   line-height: 1.5;
   font-weight: 400;
+}
+
+.mid {
+display: flex;
+flex-wrap: wrap;
+color: #fefefe;
+justify-content: center;
+align-items: center;
+}
+
+.avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.icon-appmsg-create{
+  font-size: 10rpx;
+}
+
+.des{
+  color: #fefefe;
+}
+
+.three{
+  position: relative;
+  background-color: #fefefe;
+  left: 50%;
+  height: 100rpx;
+  width: 70%;
+  transform: translateX(-50%);
+  border-radius: 60rpx;
+  top: 50rpx;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 10rpx;
+}
+
+.vip{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 85rpx;
+  width: 90%;
+  border-radius: 20rpx;
+  top: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(212, 201, 201, 0.74);
+}
+
+.left {
+  position: absolute;
+  left: 20rpx;
+  color: black;
+}
+
+.right {
+  position: absolute;
+  right: 35rpx;
+  color: rgba(212, 201, 201, 0.74);
+}
+
+.icon-iconfontyoujiantou{
+  font-size: 46rpx;
+  position: absolute;
+  right: 0rpx;
+  color: rgba(212, 201, 201, 0.74);
+}
+
+.play{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 85rpx;
+  width: 90%;
+  border-radius: 20rpx;
+  top: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.iconfont{
+  font-size: 55rpx;
+}
+
+.icon-bofang{
+  position: absolute;
+  left: 0;
+  color: red;
+}
+
+.left1{
+  position: absolute;
+  left: 70rpx;
+  font-size: 36rpx;
+}
+
+.icon-xiazai1{
+  position: absolute;
+  right: 80rpx;
+  color: black;
+}
+
+.icon-huaban{
+  position: absolute;
+  right: 0;
+  color: black;
+  font-size: 48rpx;
+}
+
+.musiclist{
+  position: relative;
 }

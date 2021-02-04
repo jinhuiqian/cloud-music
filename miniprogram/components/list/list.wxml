@@ -1,7 +1,7 @@
 <!--components/list/list.wxml-->
 <view class="container">
 <view class="list">
-  <image src="{{lists.picUrl}}" class="list-img"></image>
-  <text class="list-describe">{{lists.describe}}</text>
+  <image src="{{ball.iconUrl}}" class="list-img"></image>
+  <text class="list-describe">{{ball.name}}</text>
 </view>
 </view>

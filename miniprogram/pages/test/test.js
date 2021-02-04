@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     wx.cloud.callFunction({
-      name: 'playlist'
+      name: ''
     }).then((res) => {
       console.log(res)
     })

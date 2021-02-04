@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "hotsearch":"/components/hotsearch/hotsearch"
+  },
+  "navigationBarTitleText": "搜索"
+
+}

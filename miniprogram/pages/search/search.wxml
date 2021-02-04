@@ -1,0 +1,14 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view class="font" bind:tap="goToSearch"> 
+<input class="search"/>
+<text class="iconfont icon-fangdajing"></text>
+</view>
+
+<text class="text">热搜榜</text>
+<view class="divLine"></view>
+
+<view class="container">
+  <block wx:for="{{hotsearch}}" wx:key="id" >
+    <hotsearch hotsearch="{{item}}"></hotsearch>
+  </block>
+</view>

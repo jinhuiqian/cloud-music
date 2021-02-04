@@ -29,11 +29,15 @@ Page({
       console.log(res)
       console.log(res.result)
       const pl = res.result.playlist
+      const plt = res.result.playlist.creator
       this.setData({
         musiclist: pl.tracks,
         listInfo: {
           coverImgUrl: pl.coverImgUrl,
           name: pl.name,
+          avatar: plt.avatarUrl,
+          nickname: plt.nickname,
+          signature: plt.signature
         }
       })
       this._setMusiclist()

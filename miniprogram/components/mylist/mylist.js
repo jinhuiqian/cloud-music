@@ -6,7 +6,7 @@ Component({
   properties: {
     mylist: {
       type: Object,
-    }
+    },
   },
 
   /**
