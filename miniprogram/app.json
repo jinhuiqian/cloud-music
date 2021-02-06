@@ -8,7 +8,8 @@
     "pages/musiclist/musiclist",
     "pages/player/player",
     "pages/search/search",
-    "pages/searchresult/searchresult"
+    "pages/searchresult/searchresult",
+    "pages/publish/publish"
   ],
   "requiredBackgroundModes": [
     "audio"

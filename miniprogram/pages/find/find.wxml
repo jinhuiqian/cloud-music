@@ -1,2 +1,14 @@
-<!--pages/find/find.wxml-->
-<text>发现</text>
+<!-- 顶部搜索区 -->
+<view class="header">
+    <view class="left" bind:tap="onPublish">
+        <i class="iconfont icon-xie"></i>
+    </view>
+    <view class="right">
+        <q-search bind:search="onSearch"/>
+    </view>
+</view>
+
+<scroll-view class="container" scroll-y>
+<!-- 底部弹出层 -->
+<q-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"></q-login>
+</scroll-view>

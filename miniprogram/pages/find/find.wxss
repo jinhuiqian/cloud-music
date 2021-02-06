@@ -1,1 +1,25 @@
-/* pages/find/find.wxss */
+.header{
+  display: flex;
+  flex-grow: inherit;
+  padding-top: 20rpx;
+}
+
+.left{
+  height: 50rpx;
+  width: 100rpx;
+  padding-left: 30rpx;
+}
+
+.iconfont{
+  font-size: 60rpx;
+}
+
+.right{
+  padding-right: 30rpx;
+}
+
+.container {
+  margin-top: 10rpx;
+  box-sizing: border-box;
+  height: 100vh;
+}

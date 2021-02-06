@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "q-search": "/components/search/search",
+    "q-login": "/components/login/login"
+  },
   "navigationBarTitleText": "发现"
 }

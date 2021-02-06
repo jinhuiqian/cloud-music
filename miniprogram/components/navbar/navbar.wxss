@@ -3,7 +3,6 @@
   position: fixed; 
   display: flex;
   width: 100%; 
-  top: 0;
   z-index: 999;
 }
 
@@ -15,6 +14,7 @@
   position: relative;
   left: 30rpx;
   font-size: 60rpx;
+  z-index: 1000;
 }
 
 .text{
@@ -22,10 +22,32 @@
   color: #fefefe;
   font-size: 40rpx;
   left: 60rpx;
+  z-index: 1000;
 }
 
 .icon-r {
   position: relative;
   left: 65rpx;
   font-size: 20rpx;
+}
+
+/* 1.图片背景模糊 */
+.blur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(40rpx);
+  opacity: 0.4;
+}
+
+/* 2.遮罩层 */
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
 }

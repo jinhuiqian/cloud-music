@@ -1,8 +1,10 @@
 <!-- 自定义顶部栏 -->
-<view class="nav-bar" style="height:{{navBarHeight}}px;margin-top:{{navBarHeight+menuHeight/2}}rpx;">
-  <text class="iconfont icon-zuojiantou"></text>
-  <text class="text">歌单</text>
-  <text class="iconfont icon-r"></text>
+<view class="nav-bar" style="height:{{navBarHeight + 33}}px;">
+  <text class="iconfont icon-zuojiantou" bindtap="back" style="margin-top:{{navBarHeight+menuHeight/2}}rpx;"></text>
+  <text class="text" style="margin-top:{{navBarHeight+menuHeight/2}}rpx;">{{title}}</text>
+  <view wx:if="{{listInfo.coverImgUrl}}" class='blur-bg' style='background: url({{listInfo.coverImgUrl}}) no-repeat center/cover;z-index:11;'>
+  </view>
+  <view wx:if="{{listInfo.coverImgUrl}}" class="mask" style="z-index:10"></view>
 </view>
 
 <!-- 

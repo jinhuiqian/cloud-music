@@ -1,60 +1,52 @@
-<q-navbar></q-navbar>
+<!-- 默认导航 -->
+<q-navbar class="header" style="opacity:{{1-opacity}};" title="{{title}}"></q-navbar>
 
-<view class="container">
+<!-- 切换导航 -->
+<q-navbar class="header" style="opacity:{{opacity}};" title="{{title}}" listInfo="{{listInfo}}"></q-navbar>
 
-<!-- 判断是否有封面图，有就作为顶部view区域的背景图-->
-<view wx:if="{{listInfo.coverImgUrl}}" class="detail-container"
-  style='background: url({{listInfo.coverImgUrl}}) no-repeat top/cover'>
-</view>
-
-<!-- 遮罩层 -->
-<view class='detail-mask'></view>
-
-<!-- 歌单信息，左图右文 -->
-<view class='detail-info'>
-  <image src="{{listInfo.coverImgUrl}}" class="detail-img"></image>
-  <view class="back"></view>
-
-  <view class="info">
-  <view class='detail-name'>{{listInfo.name}}</view>
-
-  <view class="mid">
-  <image src="{{listInfo.avatar}}" class="avatar"></image>
-  <text>{{listInfo.nickname}}</text>
-  <text class=" iconfont icon-appmsg-create"></text>
+<!-- 歌单信息最外层容器，包含顶部导航高度，歌单信息以及白色信息条-->
+<view class="info-container" style="padding-top:{{ statusBarHeight + 44}}px;">
+  <view wx:if="{{listInfo.coverImgUrl}}" class='blur-bg' style='background: url({{listInfo.coverImgUrl}}) no-repeat center/cover;z-index:101'>
   </view>
+  <view class="mask" style="z-index:100"></view>
 
-  <view class="des">{{listInfo.signature}}</view>
-  <text class="iconfont icon-iconfontyoujiantou"></text>
+  <view class="detail-info" style="z-index:102">
+    <view class="left">
+      <image src="{{listInfo.avatarUrl}}" class="detail-img"></image>
   </view>
-
+  <view class="right">
+  <view class="detail-name ellipsis">{{listInfo.name}}</view>
+  <view class="user-info">
+    <image src="{{listInfo.avatarUrl}}"></image>
+    <text class="info">{{listInfo.nickname}}</text>
+  </view>
+  <view class="description ellipsis">
+    <text wx:if="{{listInfo.description!=null}}">{{listInfo.description}}</text>
+  </view>
+  </view>
+  <!-- 收藏、评论、分享 -->
+  <view class="control">
+    <view>
+      <text class="iconfont icon-shoucang"></text>
+      <text>{{listInfo.subscribedCount}}</text>
+    </view>
+    <view>
+      <text class="iconfont icon-pinglun"></text>
+      <text>{{listInfo.commentCount}}</text>
+    </view>
+    <view>
+      <text class="iconfont icon-fenxiang"></text>
+      <text>{{listInfo.shareCount}}</text>
+    </view>
+  </view>
+  </view>
 </view>
 
-<view class="three">
-  <text class="a iconfont icon-shoucang"></text>
-  <text class="b">2342</text>
-  <text class="c iconfont icon-shuxian"></text>
-  <text class="c iconfont icon-pinglun"></text>
-  <text class="d">26</text>
-  <text class="e iconfont icon-shuxian"></text>
-  <text class="f iconfont icon-fenxiang"></text>
-  <text class="g">94</text>
-</view>
+<!-- 歌曲列表组件 -->
+<scroll-view class="content">
+  <q-musiclist musiclist="{{musiclist}}" />
+  <q-musiclist musiclist="{{musiclist}}" />
+</scroll-view>
 
-<view class="vip">
-  <text class="left">含有25首VIP专享歌曲</text>
-  <text class="right">立即续费</text>
-  <text class="iconfont icon-iconfontyoujiantou"></text>
+<view class="bottom">
 </view>
-
-<view class="play">
-<text class="iconfont icon-bofang"></text>
-<text class="left1">播放全部</text>
-<text class="iconfont icon-xiazai1"></text>
-<text class="iconfont icon-huaban"></text>
-</view>
-
-</view>
-
-<!-- 使用歌曲列表组件-->
-<q-musiclist musiclist="{{musiclist}}" class="musiclist"/>
