@@ -37,7 +37,7 @@ Page({
       const detail = event.detail
       console.log(detail)
       wx.navigateTo({
-        url: '../publish/publish',
+        url: `../publish/publish?nickname=${detail.nickname}&avatarUrl=${detail.avatarUrl}`,
       })
     },
     onLoginFail() {

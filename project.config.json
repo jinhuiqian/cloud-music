@@ -94,6 +94,12 @@
           "pathName": "pages/searchresult/searchresult",
           "query": "keywords=冬眠",
           "scene": null
+        },
+        {
+          "name": "publish",
+          "pathName": "pages/publish/publish",
+          "query": "nickName=钱锦辉&avatarUrl=https://jinhuiqian.oss-cn-beijing.aliyuncs.com/avatar/me.jpg",
+          "scene": null
         }
       ]
     }
